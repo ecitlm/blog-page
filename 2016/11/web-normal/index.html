@@ -1,0 +1,1004 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+<!-- 
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+-->
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="web" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性,统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前端开发的一般书写规范">
+<meta property="og:url" content="http://code.it919.cn/2016/11/web-normal/index.html">
+<meta property="og:site_name" content="IT开发者">
+<meta property="og:description" content="此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性,统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。">
+<meta property="og:updated_time" content="2016-12-01T01:06:47.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web前端开发的一般书写规范">
+<meta name="twitter:description" content="此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性,统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://code.it919.cn/2016/11/web-normal/"/>
+
+
+
+
+
+  <title> web前端开发的一般书写规范 | IT开发者 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">IT开发者</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://code.it919.cn/2016/11/web-normal/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ecitlm">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/img/head.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="IT开发者">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="IT开发者" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                web前端开发的一般书写规范
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2016-11-20T09:42:55+08:00">
+                2016-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+              <div class="post-description">
+                  此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性,统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-规范说明"><a href="#1-规范说明" class="headerlink" title="1. 规范说明"></a>1. 规范说明</h2><p>此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性。<br>此规范为参考规范，不全是硬性要求，部分硬性约定见下一条<a href="#2">书写规范</a>，统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。  </p>
+<h3 id="1-1-结构说明"><a href="#1-1-结构说明" class="headerlink" title="1.1 结构说明"></a>1.1 结构说明</h3><p>– <a href="#项目结构">项目结构</a><br>—-|—- <a href="#css-文件结构">CSS文件结构</a><br>—-|—- <a href="#js-文件结构">JS文件结构</a>  </p>
+<h2 id="2-书写规范"><a href="#2-书写规范" class="headerlink" title="2. 书写规范"></a>2. 书写规范</h2><h3 id="2-1-样式与内容分离"><a href="#2-1-样式与内容分离" class="headerlink" title="2.1 样式与内容分离"></a>2.1 样式与内容分离</h3><h4 id="2-1-1-项目结构"><a href="#2-1-1-项目结构" class="headerlink" title="2.1.1 项目结构"></a>2.1.1 项目结构</h4><pre><code>--- 
+ |---- index.html             入口页    
+ |---- js/                    JS //具体见JS细化结构                 
+ |---- css/                   CSS //具体见CSS细化结构
+</code></pre><h4 id="2-1-2-重构步骤约定"><a href="#2-1-2-重构步骤约定" class="headerlink" title="2.1.2 重构步骤约定"></a>2.1.2 重构步骤约定</h4><ol>
+<li><code>index.html</code> 全部样式附着于 <code>class=&quot;xxx&quot;</code> <strong>注：</strong> <em>此时文件中不包含任何一个 id=”xxx”</em></li>
+<li>为上一步书写 CSS style<br><strong>[至此重构完成]</strong></li>
+<li>开始书写<code>js</code>交互文件，使用 <code>ID</code> 和 <code>Class</code> 定位被操作句柄</li>
+<li>向 <code>index.html</code> 中需要的地方添加 <code>id=&quot;xxx&quot;</code> 及 <code>data-xxx=&quot;xxx&quot;</code><br><strong>[至此交互效果完成]</strong></li>
+</ol>
+<h4 id="2-1-3-命名规范"><a href="#2-1-3-命名规范" class="headerlink" title="2.1.3 命名规范"></a>2.1.3 命名规范</h4><ul>
+<li>文件及文件夹: 全部英文小写字母+数字或连接符”<code>-</code> , <code>_</code> “，不可出现其他字符<br>如：<code>../css/style.css, jquery.1.x.x.js</code> </li>
+<li>文件：调用 <code>/libs</code> 文件需包含版本号，压缩文件需包含<code>min</code>关键词，其他插件则可不包含<br>如：<code>/libs/jquery.1.9.1.js</code> <code>/libs/modernizr-1.7.min.js</code> <code>fileuploader.js</code> <code>plugins.js</code></li>
+<li>ID: <a href="http://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E5%91%BD%E5%90%8D%E6%B3%95" title="Wiki:匈牙利命名法" target="_blank" rel="external">匈牙利命名法</a> &amp; <a href="http://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB" title="小駝峰式命名法" target="_blank" rel="external">小駝峰式命名法</a><br>如：<code>firstName</code> <code>topBoxList</code> <code>footerCopyright</code></li>
+<li>Class: [减号连接符]<br>如：<code>top-item</code> <code>main-box</code> <code>box-list-item-1</code></li>
+<li>尽量使用语义明确的单词命名，避免 <code>left</code> <code>bottom</code> 等方位性的词语</li>
+</ul>
+<h4 id="2-1-4-格式-amp-编码"><a href="#2-1-4-格式-amp-编码" class="headerlink" title="2.1.4 格式&amp;编码"></a>2.1.4 格式&amp;编码</h4><ul>
+<li>文本文件： <code>.xxx</code> UTF-8<em>(无BOM)</em> 编码</li>
+<li>图片文件： <code>.png</code> <em>(PNG-24)</em> <code>.jpg</code> <em>(压缩率8-12)</em></li>
+<li>动态图片： <code>.gif</code></li>
+<li>压缩文件： <code>.tar.gz</code> <code>.zip</code></li>
+</ul>
+<h3 id="2-2-CSS-细化规范"><a href="#2-2-CSS-细化规范" class="headerlink" title="2.2 CSS 细化规范"></a>2.2 CSS 细化规范</h3><h4 id="2-2-1-CSS-文件结构"><a href="#2-2-1-CSS-文件结构" class="headerlink" title="2.2.1 CSS 文件结构"></a>2.2.1 CSS 文件结构</h4><pre><code>--- ../css/
+ |---- css/libs/reset.css                  CSS reset文件
+ |---- … … 
+ |---- css/images/                         主 CSS-sprite 图片     
+ |---- css/style.css                       主 CSS 样式表
+ |---- … … 
+ |---- css/images/xxx/sprite.png           xxx 的 CSS-sprite 图片
+ |---- css/xxx-style.css                   xxx 的 样式表
+</code></pre><h4 id="2-2-2-CSS-含Less-文件结构"><a href="#2-2-2-CSS-含Less-文件结构" class="headerlink" title="2.2.2 CSS(含Less) 文件结构"></a>2.2.2 CSS(含Less) 文件结构</h4><pre><code>--- ../css/
+ |---- css/libs/reset.less            CSS reset文件
+ |---- css/libs/elements.less         Less 函数复用文件
+ |---- … … 
+ |---- css/images/                         主 CSS-sprite 图片     
+ |---- css/style.less                      主样式Less
+ |---- css/style.css                       less -&gt; css 自动生成
+ |---- … … 
+ |---- css/images/xxx/sprite.png           xxx 的 CSS-sprite 图片
+ |---- css/xxx-style.less                  xxx 的 Less
+ |---- css/xxx-style.css                   less -&gt; css 自动生成
+</code></pre><h4 id="2-2-3-使用Less"><a href="#2-2-3-使用Less" class="headerlink" title="2.2.3 使用Less"></a>2.2.3 使用Less</h4><p>在 <code>.less</code>文件头部引入 <a href="https://github.com/hzlzh/cool-head/blob/master/Template/css/libs/reset.less" title="reset.less from HTML5 Boilerplate" target="_blank" rel="external">reset.less</a> &amp; <a href="https://github.com/hzlzh/cool-head/blob/master/Template/css/libs/elements.less" title="elements.less from lesselements" target="_blank" rel="external">elements.less</a>，之后调用如下属性传参即可，具体使用说明见 -&gt; <a href="http://lesselements.com/" target="_blank" rel="external">Lesselements</a> 官方文档   </p>
+<pre><code>@import &quot;libs/reset.less&quot;;  
+@import &quot;libs/elements.less&quot;;
+
+.gradient
+.bw-gradient
+.bordered
+.drop-shadow
+.rounded
+.border-radius
+.opacity
+.transition-duration
+.rotation
+.scale
+.transition
+.inner-shadow
+.box-shadow
+.columns
+.translate
+</code></pre><h4 id="2-2-4-CSS-reset"><a href="#2-2-4-CSS-reset" class="headerlink" title="2.2.4 CSS reset"></a>2.2.4 CSS reset</h4><p>CSS reset 文件使用：<a href="https://github.com/hzlzh/cool-head/blob/master/Template/css/libs/reset.css" title="CSS reset 文件" target="_blank" rel="external">reset.css</a> 或 <a href="https://github.com/hzlzh/cool-head/blob/master/Template/css/libs/reset.less" title="reset.less from HTML5 Boilerplate" target="_blank" rel="external">reset.less</a>   </p>
+<ul>
+<li>reset文件用于重设各个浏览器的默认样式方案，解决其引起的耦合问题。  </li>
+<li>也可使用 <code>.clearfix</code> 清除浮动</li>
+</ul>
+<h4 id="2-2-5-CSS-注释格式约定"><a href="#2-2-5-CSS-注释格式约定" class="headerlink" title="2.2.5 CSS 注释格式约定"></a>2.2.5 CSS 注释格式约定</h4><pre><code>/*
+@name: Drop Down Menu
+@description: Style of top bar drop down menu.
+@require: reset.css
+@author: Andy Huang(andyahung@geekpark.net)
+*/
+</code></pre><p><em>其中，@require为可选项</em> </p>
+<ul>
+<li>CSS换行制表：使用 2 <del>或4</del> 个空格，而非[Tab]</li>
+<li>书写格式：<ul>
+<li>CSS名称+冒号+属性<br>如：<code>.box1 {float:left;}</code></li>
+<li>建议保留<code>{</code>左侧空格，字体名用<code>\</code>包含<br>如：<code>.box1,.box2,.box3 {font-family:Courier,&#39;Courier New&#39;;}</code></li>
+<li>避免中文，或使用转义，推荐前者<br>如：<code>font-family: &quot;Microsoft YaHei&quot;;</code> <code>font-family:\5fae\8f6f\96c5\9ed1;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-2-6-CSS各属性的排列顺序：不做硬性要求"><a href="#2-2-6-CSS各属性的排列顺序：不做硬性要求" class="headerlink" title="2.2.6 CSS各属性的排列顺序：不做硬性要求"></a>2.2.6 CSS各属性的排列顺序：不做硬性要求</h4><p><em>如：以下2种顺序均可</em></p>
+<pre><code>.box {
+  /* 顺序1 */
+  background: none repeat scroll 0 0 transparent;
+  bottom: 11px;
+  position: relative;
+  width: 22px;
+  z-index: 33;
+}
+.box {
+  /* 顺序2 */
+  z-index: 33;
+  width: 22px;
+  bottom: 11px;
+  background: transparent none repeat scroll 0 0 ;
+  position: relative;
+}
+</code></pre><h4 id="2-2-7-CSS嵌套规则"><a href="#2-2-7-CSS嵌套规则" class="headerlink" title="2.2.7 CSS嵌套规则"></a>2.2.7 CSS嵌套规则</h4><pre><code>/* 推荐嵌套层级 */
+.ui-icon-rarr{}
+.ui-icon-larr{}
+.ui-title{}
+.ui-nav .ui-list{}
+.ui-table .ui-list{}
+
+/* 不推荐 */
+.ui-icon-rarr{}
+.ui-icon-larr{}
+.ui-title{}
+.ui-list{}
+.ui-nav{}
+</code></pre><h4 id="2-2-8-CSS格式化"><a href="#2-2-8-CSS格式化" class="headerlink" title="2.2.8 CSS格式化"></a>2.2.8 CSS格式化</h4><p>勿格式化，保留下面这种格式，增加可读性和可维护性，后期后台程序(如：PHP/Python)会将CSS压缩成 <strong>一行</strong> 输出：</p>
+<pre><code>.box{
+  /* 勿格式化，增加可读性 */
+  background: none repeat scroll 0 0 transparent;
+  bottom: 11px;
+  position: relative;
+  width: 22px;
+  z-index: 33;
+}
+</code></pre><h3 id="2-3-XHTML-细化规范"><a href="#2-3-XHTML-细化规范" class="headerlink" title="2.3 XHTML 细化规范"></a>2.3 XHTML 细化规范</h3><h4 id="2-3-1-HTML-注释格式约定"><a href="#2-3-1-HTML-注释格式约定" class="headerlink" title="2.3.1 HTML 注释格式约定"></a>2.3.1 HTML 注释格式约定</h4><pre><code>&lt;!--
+@name: Drop Down Menu
+@description: Style of top bar drop down menu.
+@author: Andy Huang(andyahung@geekpark.net)
+--&gt;
+
+&lt;div id=&quot;header&quot;&gt;
+    &lt;div class=&quot;xxx&quot;&gt;
+        &lt;span&gt;HTML行内注释格式&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;!-- #header end--&gt;
+</code></pre><ul>
+<li>HTML换行缩进：<strong>采用 2 空格</strong></li>
+</ul>
+<h4 id="2-3-2-HTML嵌套规则"><a href="#2-3-2-HTML嵌套规则" class="headerlink" title="2.3.2 HTML嵌套规则"></a>2.3.2 HTML嵌套规则</h4><pre><code>/* 推荐嵌套层级 */
+  &lt;ul class=&quot;ui-nav&quot;&gt;
+    &lt;li class=&quot;ui-nav-item&quot;&gt; some text
+      &lt;ul class=&quot;ui-nav-item-child&quot;&gt;
+        &lt;li&gt; some text
+          &lt;ul class=&quot;ui-list&quot;&gt;
+            &lt;li class=&quot;ui-list-item&quot;&gt; some text&lt;/li&gt;
+          &lt;/ul
+        ...
+       &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li
+    ...
+  &lt;/ul&gt;
+</code></pre><h4 id="2-3-4-第一行统一使用HTML5标准：-lt-DOCTYPE-html-gt"><a href="#2-3-4-第一行统一使用HTML5标准：-lt-DOCTYPE-html-gt" class="headerlink" title="2.3.4 * 第一行统一使用HTML5标准：&lt;!DOCTYPE html&gt;"></a>2.3.4 * 第一行统一使用HTML5标准：&lt;!DOCTYPE html&gt;</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html dir=&quot;ltr&quot; lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;title&gt;极客公园 | 创新者社区&lt;/title&gt;
+  &lt;meta name=&quot;keywords&quot; content=&quot;xxxx, xxx, xxxxx&quot; /&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;xxxxxxxxxxxxxxxxxxxx&quot; /&gt;
+</code></pre><h4 id="2-3-5-Meta-的使用：（需要根据具体需求按需选择）可参看：cool-head"><a href="#2-3-5-Meta-的使用：（需要根据具体需求按需选择）可参看：cool-head" class="headerlink" title="2.3.5 Meta 的使用：（需要根据具体需求按需选择）可参看：cool-head"></a>2.3.5 Meta 的使用：（需要根据具体需求按需选择）可参看：<a href="https://github.com/hzlzh/cool-head" target="_blank" rel="external">cool-head</a></h4><pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;max-age=7200&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;RSS 2.0&quot; href=&quot;http://feeds.geekpark.net/&quot; /&gt;
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
+&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/apple-touch-icon.png&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/xxx.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/xxx.css&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    //Google 统计代码 的位置在离&lt;/head&gt;最近的位置
+&lt;/script&gt;
+</code></pre><p>  </p>
+<ul>
+<li><code>&lt;img&gt;</code>标签默认缺省格式：<code>&lt;img src=&quot;xxx.png&quot; alt=&quot;缺省时文字&quot; /&gt;</code> 避免出现<a href="http://js8.in/555.html" title="src=&quot;&quot; 问题" target="_blank" rel="external">src=”” 问题</a></li>
+<li><code>&lt;a&gt;</code>标签缺省格式：<code>&lt;a href=&quot;###&quot; title=&quot;链接名称&quot;&gt;xxx&lt;/&gt;</code> 注：<code>target=&quot;_blank&quot;</code> 根据需求决定  </li>
+<li><code>&lt;a&gt;</code>标签预留链接占位符使用<code>###</code>，参见：<a href="http://www.v2ex.com/t/48511/" title="a标签占位符问题" target="_blank" rel="external">a标签占位符问题</a></li>
+<li>所有标签需要符合XHTML标准闭合</li>
+<li>一律统一标签结尾斜杠的书写形式：<code>&lt;br /&gt;</code> <code>&lt;hr /&gt;</code> 注意之间空格</li>
+<li>避免使用已过时标签，如：<code>&lt;b&gt;</code> <code>&lt;u&gt;</code> <code>&lt;i&gt;</code> 而用 <code>&lt;strong&gt;</code> <code>&lt;em&gt;</code>等代替</li>
+<li>使用<code>data-xxx</code>来添加自定义数据，如：<code>&lt;input data-xxx=&quot;yyy&quot;/&gt;</code></li>
+<li>避免使用<code>style=&quot;xxx:xxx;&quot;</code>的内联样式表</li>
+<li>特殊符号使用参考<a href="http://www.w3school.com.cn/html/html_entities.asp" target="_blank" rel="external">HTML 符号实体</a></li>
+</ul>
+<h3 id="2-4-JS-细化规范"><a href="#2-4-JS-细化规范" class="headerlink" title="2.4 JS 细化规范"></a>2.4 JS 细化规范</h3><h4 id="2-4-1-JS-文件结构"><a href="#2-4-1-JS-文件结构" class="headerlink" title="2.4.1 JS 文件结构"></a>2.4.1 JS 文件结构</h4><pre><code>---/js/
+|---- /libs/plugin-1/       使用到的js插件1  
+|---- /libs/plugin-2/       使用到的js插件2  
+|---- /libs/plugin-3/       使用到的js插件3  
+|---- script.js             单独书写的js  
+|---- plugins.js            调用的plugins汇总  
+|---- juqery-1.9.x.min.js   调用jq库文件  
+</code></pre><ul>
+<li>JS 换行缩进：采用 4 空格</li>
+<li>结束行需添加分号<code>;</code></li>
+<li>jQuery变量要求首字符为 <code>$</code>, 私有变量:首字符为<code>_</code>; 尽量避免全局变量.</li>
+<li>避免使用 eval()，setTimeOut使用调用函数，考虑重绘，回流 操作对页面影响  参看：<a href="http://www.zhangxinxu.com/wordpress/2010/01/%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98%EF%BC%9Acss%E6%80%A7%E8%83%BD%E8%AE%A9javascript%E5%8F%98%E6%85%A2%EF%BC%9F/" title="重绘,回流参考" target="_blank" rel="external">reflows，repaints</a></li>
+<li>JS调试使用<code>console.log()</code>及<code>console.dir()</code>进行，避免使用弹出框，线上版需要注释所有调试代码</li>
+<li>JS压缩混淆工具: <a href="http://javascriptcompressor.com/" title="JS 压缩和混淆" target="_blank" rel="external">JS Compressor</a>  如果使用了压缩，需要留 <code>name-src.js</code>在同路径供今后修改使用</li>
+</ul>
+<h5 id="2-4-2-jQuery-Call"><a href="#2-4-2-jQuery-Call" class="headerlink" title="2.4.2 jQuery Call"></a>2.4.2 jQuery Call</h5><pre><code>&lt;!-- Grab Google CDN jQuery. fall back to local if necessary --&gt;  
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&gt;&lt;/script&gt;  
+&lt;script&gt;!window.jQuery &amp;&amp; document.write(&apos;&lt;script src=&quot;js/jquery-1.7.2.min.js&quot;&gt;&lt;\/script&gt;&apos;)&lt;/script&gt;            
+</code></pre><h5 id="2-4-3-jQuery-Plugin"><a href="#2-4-3-jQuery-Plugin" class="headerlink" title="2.4.3 jQuery Plugin"></a>2.4.3 jQuery Plugin</h5><ul>
+<li>IE对HTML5标签支持，以及浏览器特性检测：<a href="http://modernizr.com/download/" target="_blank" rel="external">Modernizr</a> &amp; <a href="https://github.com/aFarkas/html5shiv" target="_blank" rel="external">html5shiv</a></li>
+<li><del>IE6 PNG 图片支持：<a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/" target="_blank" rel="external">DD_belatedPNG</a></del></li>
+<li>定制&amp;统一 浏览器的滚动条样式：<a href="https://github.com/thomd/jquery-scroll/" target="_blank" rel="external">jquery-scroll</a> &amp; <a href="https://github.com/Charuru/lionbars" target="_blank" rel="external">Lionbars</a></li>
+<li>hover提示效果文字：<a href="http://twitter.github.com/bootstrap/javascript.html#tooltips" target="_blank" rel="external">bootstrap-tooltips</a> &amp; <a href="https://github.com/jaz303/tipsy" target="_blank" rel="external">tipsy</a></li>
+<li>滚动条跟随nav效果：<a href="http://twitter.github.com/bootstrap/javascript.html#scrollspy" target="_blank" rel="external">bootstrap-scrollspy</a></li>
+<li>提示冒泡文字：<a href="https://github.com/jamescryer/grumble.js" target="_blank" rel="external">grumble.js</a></li>
+<li>导航栏过渡效果：<a href="http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers/" target="_blank" rel="external">lavalamp</a></li>
+<li>移动设备的滚动效果：<a href="https://github.com/cubiq/iscroll" target="_blank" rel="external">iscroll 4</a></li>
+<li>Mac OS Lion 风格的滚动条：<a href="https://github.com/Charuru/lionbars" target="_blank" rel="external">Lionbars</a></li>
+<li>弹性SlideShow：<a href="https://github.com/Mottie/Kwicks" target="_blank" rel="external">kwicks for jQuery</a></li>
+<li>瀑布流：<a href="https://github.com/desandro/isotope" target="_blank" rel="external">isotope</a></li>
+<li>抖动效果：<a href="https://gist.github.com/3270711" target="_blank" rel="external">jQ shake</a></li>
+<li>LightBox：<a href="https://github.com/fancyapps/fancyBox" target="_blank" rel="external">fancyBox</a></li>
+<li>KenDo UI：<a href="http://www.kendoui.com/purchase.aspx" target="_blank" rel="external">KenDo UI</a></li>
+<li>textarea自适应高度：<a href="http://unwrongest.com/projects/elastic/" target="_blank" rel="external">elastic</a></li>
+<li>提示区域 &amp; 提示层：<a href="https://github.com/needim/noty" target="_blank" rel="external">noty</a></li>
+<li>浮动话题泡：<a href="https://github.com/jamescryer/grumble.js" target="_blank" rel="external">jQuery grumble</a></li>
+<li>旋转进度：<a href="https://github.com/aterrien/jQuery-Knob" target="_blank" rel="external">jQuery Knob</a></li>
+</ul>
+<h5 id="2-4-4-JSON格式规范"><a href="#2-4-4-JSON格式规范" class="headerlink" title="2.4.4 JSON格式规范"></a>2.4.4 JSON格式规范</h5><p>参考<a href="https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md" target="_blank" rel="external">JSON Style Guide翻译</a>，原版：<a href="http://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml" target="_blank" rel="external">Google JSON Style Guide</a></p>
+<h3 id="HTML-细化规范"><a href="#HTML-细化规范" class="headerlink" title="HTML 细化规范"></a>HTML 细化规范</h3><ul>
+<li>HTML <code>head</code>部分的结构参看：<a href="https://github.com/hzlzh/cool-head" target="_blank" rel="external">cool-head</a> (摘取必要内容即可)</li>
+<li><code>css</code> 文件置于都 <strong>头部</strong></li>
+<li><code>jQuery</code> 及 <code>Google Analytics</code>引用置于 <strong>头部</strong></li>
+<li>其他效果<code>js</code>及<code>统计代码</code> 文件置于 <strong>尾部</strong></li>
+<li>HTML 代码尽量过一遍<a href="http://html5.validator.nu/" target="_blank" rel="external">HTML5 验证</a></li>
+<li>HTML 占位图片使用 <a href="http://temp.im/" title="Placehold image" target="_blank" rel="external">temp.im</a> &amp; <a href="http://placehold.us/" target="_blank" rel="external">placehold.us</a> 图片服务</li>
+</ul>
+<h3 id="2-5-Responsive-Web-规范"><a href="#2-5-Responsive-Web-规范" class="headerlink" title="2.5 Responsive Web 规范"></a>2.5 Responsive Web 规范</h3><p>从设计之处就坚持”<a href="http://www.lukew.com/ff/entry.asp?933" title="Mobile First" target="_blank" rel="external">Mobile First</a>“的理念，在重构页面的时候要灵活采取响应式的解决方案。</p>
+<h4 id="2-5-1-响应式实现途径"><a href="#2-5-1-响应式实现途径" class="headerlink" title="2.5.1 响应式实现途径"></a>2.5.1 响应式实现途径</h4><p>* 设置 <a href="https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag" title="&lt;meta&gt; ViewPort" target="_blank" rel="external">meta viewport</a> 属性</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+</code></pre><p>* 引入不同尺寸设备的样式表</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot; media=&quot;screen, handheld&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;enhanced.css&quot; media=&quot;screen  and (min-width: 40.5em)&quot; /&gt;
+&lt;!--[if (lt IE 9)&amp;(!IEMobile)]&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;enhanced.css&quot; /&gt;
+&lt;![endif]--&gt;
+</code></pre><p>* 使用 <a href="http://css-tricks.com/css-media-queries/" target="_blank" rel="external">CSS Media Queries</a> 方法</p>
+<pre><code>@media screen and (max-width: 40.5em) {
+  .product-img {
+    width: auto;
+    float: none;
+  }
+}
+@media screen and (max-width: 480px) {
+}
+</code></pre><p>* JS控制导航栏在 <a href="http://api.jquery.com/resize/" target="_blank" rel="external">resize 事件</a> 触发后的可见性，如：</p>
+<pre><code>$(w).resize(function(){ //Update dimensions on resize
+  sw = document.documentElement.clientWidth;
+  sh = document.documentElement.clientHeight;
+  checkMobile();
+});
+//Check if Mobile
+function checkMobile() {
+  mobile = (sw &gt; breakpoint) ? false : true;
+  if (!mobile) { //If Not Mobile
+    $(&apos;[role=&quot;tabpanel&quot;],#nav,#search&apos;).show(); //Show full navigation and search
+  } else { //Hide 
+    if(!$(&apos;#nav-anchors a&apos;).hasClass(&apos;active&apos;)) {
+      $(&apos;#nav,#search&apos;).hide(); //Hide full navigation and search
+    }
+  }
+}
+</code></pre><h4 id="2-5-2-响应式解决方案"><a href="#2-5-2-响应式解决方案" class="headerlink" title="2.5.2 响应式解决方案"></a>2.5.2 响应式解决方案</h4><p>* 弹性图片</p>
+<pre><code>img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+</code></pre><p>* 自适应嵌入媒体</p>
+<pre><code>.video embed, .video object, .video iframe {
+  width: 100%;
+  height: auto;
+}
+</code></pre><p>* 禁用iPhone字体自适应功能：</p>
+<pre><code>html {
+  -webkit-text-size-adjust: none;
+}
+</code></pre><p>* 让 IE 9 以下的IE版本支持响应式：</p>
+<pre><code>&lt;!--[if lt IE 9]&gt;
+  &lt;script src=&quot;http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+</code></pre><h3 id="2-6-Newletter-制作规范"><a href="#2-6-Newletter-制作规范" class="headerlink" title="2.6 Newletter 制作规范"></a>2.6 Newletter 制作规范</h3><ul>
+<li><code>CSS</code>只可使用 <strong>内联样式表</strong> ，如：<code>style=&quot;margin:0;&quot;</code></li>
+<li>设计之初遵循： <strong>图上无文本，文本后无底纹</strong> 的规则</li>
+<li>使用 <code>MailChimp HTML Email CSS Fix</code> 参看下文链接</li>
+<li>引入 <code>CSS Reset for HTML Email</code> 参看下文链接</li>
+<li>使用<code>Table</code>布局而非<code>DIV</code></li>
+<li>所有图片使用<code>IMG</code>标签，如：<code>&lt;img style=&quot;style=&quot;display:block&quot; &quot;src=&quot;&quot; /&gt;</code></li>
+<li>可以适当使用占位符<code>spacer.gif</code></li>
+<li>多用<code>&lt;br /&gt;</code>换行而非<code>&lt;p&gt;</code></li>
+<li>整体最佳宽度为：<code>550-600px</code></li>
+<li>不使用<code>Javascript</code></li>
+<li>正式发送给用户之前，多次测试</li>
+</ul>
+<p>更多细节参考下面链接：<br><a href="http://www.web-ed.com.au/2011/05/coding-html-newsletters-edms-quick-guide/" target="_blank" rel="external">12 Killer Tips and Tricks for Building HTML Email</a></p>
+<h3 id="2-7-生产力工具推荐"><a href="#2-7-生产力工具推荐" class="headerlink" title="2.7 生产力工具推荐"></a>2.7 生产力工具推荐</h3><h4 id="2-7-1-for-Mac-OS"><a href="#2-7-1-for-Mac-OS" class="headerlink" title="2.7.1 for Mac OS"></a>2.7.1 for Mac OS</h4><p><em>for more app detial check -&gt; <a href="http://osx.iusethis.com/user/hzlzh" title="App pack" target="_blank" rel="external">IUSETHIS</a></em>  </p>
+<h5 id="2-7-1-1-前端相关工具-Mac"><a href="#2-7-1-1-前端相关工具-Mac" class="headerlink" title="2.7.1.1 前端相关工具(Mac)"></a>2.7.1.1 前端相关工具(Mac)</h5><ul>
+<li>编辑器：<a href="http://www.sublimetext.com/2" target="_blank" rel="external">Sublime Text 2</a> / <a href="https://github.com/textmate/textmate" target="_blank" rel="external">TextMate 2</a> / <a href="http://macvim.org/" target="_blank" rel="external">Vim</a> / <a href="http://www.jetbrains.com/idea/" target="_blank" rel="external">Intellij IDEA</a></li>
+<li>命令行：<a href="http://www.iterm2.com/" target="_blank" rel="external">iTerm2</a></li>
+<li>浏览器调试环境：<a href="http://www.google.com/chrome" target="_blank" rel="external">Chrome</a> / <a href="http://www.mozilla.org/" target="_blank" rel="external">Firefox</a> + <a href="http://getfirebug.com/" target="_blank" rel="external">Firebug</a></li>
+<li>移动设备调试环境：<a href="http://www.mozilla.org/projects/fennec" target="_blank" rel="external">Mozilla Fennec</a></li>
+<li>兼容性测试：<a href="https://www.virtualbox.org/" target="_blank" rel="external">VirtualBox</a> + Win XP（IE 8）</li>
+<li>版本控制工具：<a href="http://mac.github.com/" target="_blank" rel="external">GitHub for Mac</a> / <a href="http://versionsapp.com/" target="_blank" rel="external">Versions</a> / <a href="http://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
+<li>FTP工具：<a href="http://filezilla-project.org/" target="_blank" rel="external">Filezilla</a> / <a href="http://itunes.apple.com/us/app/forklift/id412448059?mt=12" target="_blank" rel="external">ForkLift</a></li>
+<li>HTTP抓包及Post/Get模拟：<a href="http://www.charlesproxy.com/" target="_blank" rel="external">Charles</a></li>
+<li>PHP集成环境：<a href="http://www.apachefriends.org/en/xampp-macosx.html" target="_blank" rel="external">XAMPP for Mac</a> / <a href="http://http://mamp.info/" target="_blank" rel="external">MAMP</a></li>
+<li>SQL数据库管理：<a href="http://www.sequelpro.com/" target="_blank" rel="external">Sequel Pro</a></li>
+<li>标注工具：<a href="http://www.getmarkman.com/" target="_blank" rel="external">Mark Man</a> / <a href="http://itunes.apple.com/us/app/xscope/id447661441?mt=12" target="_blank" rel="external">xScope</a></li>
+<li>取色拾色器： <a href="http://www.jumpzero.com/frank/" target="_blank" rel="external">Frank DeLoupe</a> / <a href="http://itunes.apple.com/app/sip/id507257563?mt=12" target="_blank" rel="external">Sip</a> / <a href="http://itunes.apple.com/us/app/snip/id512505421?mt=12" target="_blank" rel="external">Snip</a> / <a href="http://itunes.apple.com/us/app/xscope/id447661441?mt=12" target="_blank" rel="external">xScope</a></li>
+<li>MarkDown编辑器：<a href="http://mouapp.com/" target="_blank" rel="external">Mou</a></li>
+<li>浏览器免刷新开发环境：<a href="http://http://livereload.com/" target="_blank" rel="external">LiveReLoad</a> / <a href="http://incident57.com/codekit/" target="_blank" rel="external">CodeKit</a></li>
+<li>CSS Sprite切图工具：<a href="http://itunes.apple.com/us/app/spriteright/id488584662?mt=12" target="_blank" rel="external">SpriteRight</a></li>
+<li>Less -&gt; CSS 编译：<a href="http://incident57.com/codekit/" target="_blank" rel="external">CodeKit</a> / <a href="http://http://livereload.com/" target="_blank" rel="external">LiveReLoad</a> / <a href="http://incident57.com/less/" target="_blank" rel="external">Less</a></li>
+<li>配色方案工具：<a href="http://itunes.apple.com/us/app/colorschemer-studio/id417896628?mt=12" target="_blank" rel="external">ColorSchemer Studio</a></li>
+<li>多浏览器Cookie管理：<a href="http://itunes.apple.com/us/app/cookie/id415585910?mt=12" target="_blank" rel="external">Cookie</a></li>
+<li>图片素材收集：<a href="http://seesparkbox.com/" target="_blank" rel="external">Sparkbox</a> / <a href="http://www.pixa-app.com/" target="_blank" rel="external">Pixa</a></li>
+</ul>
+<h5 id="2-7-1-2-其他效率工具"><a href="#2-7-1-2-其他效率工具" class="headerlink" title="2.7.1.2 其他效率工具"></a>2.7.1.2 其他效率工具</h5><ul>
+<li>快速启动及切换app：<a href="http://www.alfredapp.com/" target="_blank" rel="external">Alfred</a></li>
+<li>剪切板历史记录：<a href="http://www.alfredapp.com/" target="_blank" rel="external">Alfred</a><em>(Fretures -&gt; Clipboard)</em></li>
+<li>笔记：<a href="http://www.evernote.com/" target="_blank" rel="external">Evernote</a></li>
+<li>轻量级GTD：<a href="http://itunes.apple.com/cn/app/breaktime/id427475982?mt=12" target="_blank" rel="external">Clear</a></li>
+<li>压缩解压：<a href="https://itunes.apple.com/hk/app/the-unarchiver/id425424353?mt=12" target="_blank" rel="external">The Unarchiver</a> / <a href="https://itunes.apple.com/us/app/keka/id470158793?mt=12" target="_blank" rel="external">Keka</a> / <a href="https://itunes.apple.com/us/app/ipack/id433386677?mt=12" target="_blank" rel="external">iPack</a></li>
+<li>语言文档和快捷词扩展：<a href="http://kapeli.com/" target="_blank" rel="external">Dash</a></li>
+<li>时间中断提醒：<a href="http://itunes.apple.com/cn/app/breaktime/id427475982?mt=12" target="_blank" rel="external">BreakTime</a></li>
+</ul>
+<h5 id="2-7-2-1-前端相关工具-Windows"><a href="#2-7-2-1-前端相关工具-Windows" class="headerlink" title="2.7.2.1 前端相关工具(Windows)"></a>2.7.2.1 前端相关工具(Windows)</h5><ul>
+<li>编辑器：<a href="http://www.sublimetext.com/2" target="_blank" rel="external">Sublime Text 2</a> / <a href="http://macvim.org/" target="_blank" rel="external">Vim</a> / <a href="http://www.jetbrains.com/idea/" target="_blank" rel="external">Intellij IDEA</a></li>
+<li>命令行：<a href="http://www.putty.org/" target="_blank" rel="external">Putty</a></li>
+<li>浏览器调试环境：<a href="http://www.google.com/chrome" target="_blank" rel="external">Chrome</a> / <a href="http://www.mozilla.org/" target="_blank" rel="external">Firefox</a></li>
+<li>移动设备调试环境：<a href="https://developers.google.com/chrome/mobile/docs/debugging" target="_blank" rel="external">Chrome Remote USB Debugging</a></li>
+<li>版本控制：<a href="http://subversion.apache.org/" target="_blank" rel="external">Subversion</a> / <a href="http://windows.github.com/" target="_blank" rel="external">Github for Windows</a></li>
+<li>FTP工具：<a href="http://filezilla-project.org/" target="_blank" rel="external">Filezilla</a></li>
+<li>抓包工具：<a href="http://www.fiddler2.com/fiddler2/" target="_blank" rel="external">Fiddler2</a></li>
+<li>MarkDown：<a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad</a></li>
+<li>浏览器免刷新开发环境：<a href="http://http://livereload.com/" target="_blank" rel="external">LiveReLoad</a> / <a href="http://www.getf5.com/" target="_blank" rel="external">F5</a></li>
+<li>Less -&gt; CSS编译：<a href="http://lesscss.org/" target="_blank" rel="external">less.org</a><em>(nodejs环境下编译)</em></li>
+<li>Haml -&gt; Html编译：<a href="http://haml.info/" target="_blank" rel="external">haml.info</a><em>(Gem下编译)</em></li>
+<li>响应式设计查看工具：<a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View/" target="_blank" rel="external">Firefox Responsive Design View</a></li>
+</ul>
+<h5 id="2-7-2-2-其他效率工具-Windows"><a href="#2-7-2-2-其他效率工具-Windows" class="headerlink" title="2.7.2.2 其他效率工具(Windows)"></a>2.7.2.2 其他效率工具(Windows)</h5><ul>
+<li>笔记：<a href="http://www.evernote.com/" target="_blank" rel="external">Evernote</a></li>
+<li>压缩解压：<a href="http://www.7-zip.org/" target="_blank" rel="external">7z</a></li>
+</ul>
+<h4 id="2-7-3-其他收集"><a href="#2-7-3-其他收集" class="headerlink" title="2.7.3 其他收集"></a>2.7.3 其他收集</h4><ul>
+<li>Firefox 扩展收藏集 -&gt; <a href="https://addons.mozilla.org/en-US/firefox/collections/hzlzh/hzlzh/" target="_blank" rel="external">Firefox Add-ons collections</a></li>
+<li>Chrome 扩展 -&gt; 待添加</li>
+<li>Sublime Text 2 技巧  -&gt; <a href="http://www.douban.com/group/topic/28027863/" target="_blank" rel="external">ST2 资源技巧汇总</a></li>
+</ul>
+<h3 id="2-8-相关技巧"><a href="#2-8-相关技巧" class="headerlink" title="2.8 相关技巧"></a>2.8 相关技巧</h3><p><a href="https://github.com/GeekPark/Doc/wiki/_pages" target="_blank" rel="external">Wiki page index</a></p>
+<ul>
+<li><a href="https://github.com/GeekPark/Doc/wiki/%5B%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%BC%93%E5%AD%98%5D%E5%90%84%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95%E7%BD%91%E9%A1%B5%E6%97%B6%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E7%9A%84%E6%96%B9%E6%B3%95" target="_blank" rel="external">各浏览器的缓存清除方法</a>  </li>
+<li><a href="https://github.com/GeekPark/Doc/wiki/%5B%E6%B5%8B%E8%AF%95%E6%8A%80%E5%B7%A7%5DGmail-%E6%B7%BB%E5%8A%A0%E8%AF%8D%E7%BC%80(.--)%E8%8E%B7%E5%BE%97%E5%A4%9A%E4%B8%AA%E9%82%AE%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95" target="_blank" rel="external">测试技巧Gmail 添加词缀 .+ 获得多个邮件的方法</a>  </li>
+<li><a href="https://github.com/GeekPark/Doc/wiki/%E5%85%B3%E4%BA%8E%5BMac%5D-%5BWin%5D-%5BLinux%5D%E8%B7%A8%E7%B3%BB%E7%BB%9F%E4%BC%A0%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E5%90%8D%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" target="_blank" rel="external">关于Mac Win Linux跨系统传文件，文件名乱码的解决方案</a>  </li>
+<li><a href="https://github.com/GeekPark/Doc/wiki/%E6%8A%80%E6%9C%AF%E5%9B%A2%E9%98%9F%5B%E8%B7%AF%E7%94%B1%E4%BB%A3%E7%90%86%5D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%92%8C%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5" target="_blank" rel="external">技术团队”路由代理”解决方案和使用须知</a></li>
+</ul>
+<h3 id="使用团队"><a href="#使用团队" class="headerlink" title="使用团队"></a>使用团队</h3><p>此规范基于 <a href="http://en.wikipedia.org/wiki/MIT_License" target="_blank" rel="external">MIT License</a> 开源，持续更新维护中，可 <code>Star</code> 或 <code>Fork</code> 本项来形成你的规范，请以 <a href="https://github.com/hzlzh/GeekPark-FrontEnd-Standard/issues/new" target="_blank" rel="external">创建[issues]</a> 的方式反馈，或发起<code>Pull Request</code> </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/GitHubShare/" rel="next" title="Github上整理的日常发现的好资源">
+                <i class="fa fa-chevron-left"></i> Github上整理的日常发现的好资源
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/web-share/" rel="prev" title="一些WEB前端资源分享">
+                一些WEB前端资源分享 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/img/head.jpg"
+               alt="ecitlm" />
+          <p class="site-author-name" itemprop="name">ecitlm</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-规范说明"><span class="nav-number">1.</span> <span class="nav-text">1. 规范说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-结构说明"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 结构说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-书写规范"><span class="nav-number">2.</span> <span class="nav-text">2. 书写规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-样式与内容分离"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 样式与内容分离</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-项目结构"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 项目结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-重构步骤约定"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 重构步骤约定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-命名规范"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 命名规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-格式-amp-编码"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4 格式&编码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-CSS-细化规范"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 CSS 细化规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-CSS-文件结构"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 CSS 文件结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-CSS-含Less-文件结构"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 CSS(含Less) 文件结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-使用Less"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3 使用Less</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-CSS-reset"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.2.4 CSS reset</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-CSS-注释格式约定"><span class="nav-number">2.2.5.</span> <span class="nav-text">2.2.5 CSS 注释格式约定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-CSS各属性的排列顺序：不做硬性要求"><span class="nav-number">2.2.6.</span> <span class="nav-text">2.2.6 CSS各属性的排列顺序：不做硬性要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-CSS嵌套规则"><span class="nav-number">2.2.7.</span> <span class="nav-text">2.2.7 CSS嵌套规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-8-CSS格式化"><span class="nav-number">2.2.8.</span> <span class="nav-text">2.2.8 CSS格式化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-XHTML-细化规范"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 XHTML 细化规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-HTML-注释格式约定"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1 HTML 注释格式约定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-HTML嵌套规则"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2 HTML嵌套规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-第一行统一使用HTML5标准：-lt-DOCTYPE-html-gt"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.4 * 第一行统一使用HTML5标准：<!DOCTYPE html></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-Meta-的使用：（需要根据具体需求按需选择）可参看：cool-head"><span class="nav-number">2.3.4.</span> <span class="nav-text">2.3.5 Meta 的使用：（需要根据具体需求按需选择）可参看：cool-head</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-JS-细化规范"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 JS 细化规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-JS-文件结构"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1 JS 文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-2-jQuery-Call"><span class="nav-number">2.4.1.1.</span> <span class="nav-text">2.4.2 jQuery Call</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-3-jQuery-Plugin"><span class="nav-number">2.4.1.2.</span> <span class="nav-text">2.4.3 jQuery Plugin</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-4-JSON格式规范"><span class="nav-number">2.4.1.3.</span> <span class="nav-text">2.4.4 JSON格式规范</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-细化规范"><span class="nav-number">2.5.</span> <span class="nav-text">HTML 细化规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-Responsive-Web-规范"><span class="nav-number">2.6.</span> <span class="nav-text">2.5 Responsive Web 规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1-响应式实现途径"><span class="nav-number">2.6.1.</span> <span class="nav-text">2.5.1 响应式实现途径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-响应式解决方案"><span class="nav-number">2.6.2.</span> <span class="nav-text">2.5.2 响应式解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-Newletter-制作规范"><span class="nav-number">2.7.</span> <span class="nav-text">2.6 Newletter 制作规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-生产力工具推荐"><span class="nav-number">2.8.</span> <span class="nav-text">2.7 生产力工具推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-1-for-Mac-OS"><span class="nav-number">2.8.1.</span> <span class="nav-text">2.7.1 for Mac OS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-1-1-前端相关工具-Mac"><span class="nav-number">2.8.1.1.</span> <span class="nav-text">2.7.1.1 前端相关工具(Mac)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-1-2-其他效率工具"><span class="nav-number">2.8.1.2.</span> <span class="nav-text">2.7.1.2 其他效率工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-2-1-前端相关工具-Windows"><span class="nav-number">2.8.1.3.</span> <span class="nav-text">2.7.2.1 前端相关工具(Windows)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-2-2-其他效率工具-Windows"><span class="nav-number">2.8.1.4.</span> <span class="nav-text">2.7.2.2 其他效率工具(Windows)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-3-其他收集"><span class="nav-number">2.8.2.</span> <span class="nav-text">2.7.3 其他收集</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-相关技巧"><span class="nav-number">2.9.</span> <span class="nav-text">2.8 相关技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用团队"><span class="nav-number">2.10.</span> <span class="nav-text">使用团队</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ecitlm</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+
+    NexT.Mist
+
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
