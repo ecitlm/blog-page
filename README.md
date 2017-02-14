@@ -1,2 +1,2 @@
 #blog
-code.it919.cn
+http://code.it919.cn
