@@ -1,1 +1,1 @@
-git pull && git add . && git commit -m '编写readme文档' && git push
+git pull && git add . && git commit -m '更新默认首页' && git push
