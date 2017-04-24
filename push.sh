@@ -1,2 +1,2 @@
-git pull && git add . && git commit -m '更新默认首页' && git push
+git pull && git add . && git commit -m '添加Ksort方法' && git push
 
