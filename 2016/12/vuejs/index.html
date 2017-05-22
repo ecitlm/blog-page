@@ -86,17 +86,17 @@
 
 
 
-<meta name="description" content="Vue作为一个前端轻量级的MVVM框架有其独到之处 本文主要针对Vue1.0版本的官方文档进行梳理总结">
+<meta name="description" content="Vue作为一个前端轻量级的MVVM框架有其独到之处,本文主要针对Vue1.0版本的官方文档进行梳理总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vuejs-- Vue基础总结">
+<meta property="og:title" content="Vuejs -- Vue基础总结">
 <meta property="og:url" content="http://code.it919.cn/2016/12/vuejs/index.html">
 <meta property="og:site_name" content="IT开发者">
-<meta property="og:description" content="Vue作为一个前端轻量级的MVVM框架有其独到之处 本文主要针对Vue1.0版本的官方文档进行梳理总结">
+<meta property="og:description" content="Vue作为一个前端轻量级的MVVM框架有其独到之处,本文主要针对Vue1.0版本的官方文档进行梳理总结">
 <meta property="og:image" content="http://p0.meituan.net/dpnewvc/43cca72c865daf323a732de2c8924743116787.png">
-<meta property="og:updated_time" content="2016-12-21T01:08:57.353Z">
+<meta property="og:updated_time" content="2017-05-22T13:22:20.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vuejs-- Vue基础总结">
-<meta name="twitter:description" content="Vue作为一个前端轻量级的MVVM框架有其独到之处 本文主要针对Vue1.0版本的官方文档进行梳理总结">
+<meta name="twitter:title" content="Vuejs -- Vue基础总结">
+<meta name="twitter:description" content="Vue作为一个前端轻量级的MVVM框架有其独到之处,本文主要针对Vue1.0版本的官方文档进行梳理总结">
 <meta name="twitter:image" content="http://p0.meituan.net/dpnewvc/43cca72c865daf323a732de2c8924743116787.png">
 
 
@@ -131,7 +131,7 @@
 
 
 
-  <title> Vuejs-- Vue基础总结 | IT开发者 </title>
+  <title> Vuejs -- Vue基础总结 | IT开发者 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -213,6 +213,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -245,7 +255,7 @@
   <link itemprop="mainEntityOfPage" href="http://code.it919.cn/2016/12/vuejs/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="lm">
+    <meta itemprop="name" content="ecitlm">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="/img/head.jpg">
   </span>
@@ -266,7 +276,7 @@
             
             
               
-                Vuejs-- Vue基础总结
+                Vuejs -- Vue基础总结
               
             
           </h1>
@@ -298,8 +308,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
+                  <a href="/categories/Vue-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue.js</span>
                   </a>
                 </span>
 
@@ -322,7 +332,7 @@
 
           
               <div class="post-description">
-                  Vue作为一个前端轻量级的MVVM框架有其独到之处 本文主要针对Vue1.0版本的官方文档进行梳理总结
+                  Vue作为一个前端轻量级的MVVM框架有其独到之处,本文主要针对Vue1.0版本的官方文档进行梳理总结
               </div>
           
 
@@ -337,7 +347,8 @@
       
 
       
-        <p>Vue作为一个前端轻量级的MVVM框架有其独到之处,本文主要针对Vue1.0版本的官方文档进行梳理总结,主要包括以下几个方面:<br>1.数据绑定<br>2.指令<br>3.组件<br>4.事件<br>5.过滤器<br><a id="more"></a></p>
+        <p>Vue作为一个前端轻量级的MVVM框架有其独到之处,本文主要针对Vue1.0版本的官方文档进行梳理总结,主要包括以下几个方面:<br>1.数据绑定<br>2.指令<br>3.组件<br>4.事件<br>5.过滤器</p>
+<a id="more"></a>
 <h2 id="Vue基础"><a href="#Vue基础" class="headerlink" title="Vue基础"></a>Vue基础</h2><h3 id="Vue实例"><a href="#Vue实例" class="headerlink" title="Vue实例"></a>Vue实例</h3><h4 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h4><p>通过构造函数可以创建一个Vue的根实例：</p>
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> <span class="type">Vue</span>(&#123;</div><div class="line">  <span class="comment">// 选项</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>一个Vue的实例是MVVM模型中的ViewModel，在实例化时，需要传入一个选项对象，其中包括挂载元素、数据、模板、方法，生命周期的钩子函数等</p>
@@ -606,7 +617,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
+            <a href="/tags/Vue-js/" rel="tag"># Vue.js</a>
           
         </div>
       
@@ -688,14 +699,14 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/img/head.jpg"
-               alt="lm" />
-          <p class="site-author-name" itemprop="name">lm</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+               alt="ecitlm" />
+          <p class="site-author-name" itemprop="name">ecitlm</p>
+          <p class="site-description motion-element" itemprop="description">ecitlm的博客,个人主页</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -723,6 +734,35 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ecitlm" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/ecit" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://me.it919.cn/" target="_blank" title="个人简历">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  个人简历
+                </a>
+              </span>
+            
           
         </div>
 
@@ -768,11 +808,11 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">lm</span>
+  <span class="author" itemprop="copyrightHolder">ecitlm</span>
 </div>
 
 
