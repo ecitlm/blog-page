@@ -1,2 +1,2 @@
-git pull && git add . && git commit -m '修改about' && git push
+git pull && git add . && git commit -m '添加文章' && git push
 

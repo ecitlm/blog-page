@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript,node," />
+  <meta name="keywords" content="linux 安装配置node开发环境及搭建express项目小记" />
 
 
 
@@ -101,20 +101,21 @@
 
 
 
-<meta name="description" content="随著前端届技术大百花齐放, node已俨然成为前端开发中最具牛X的,里程碑式的技术之一,了掌握 node.js,已是每个前端程序员必备的技能了,近期接触 node.js操作 MySQL 数据库,进一步的加深对 node.js 的认识,随笔记录之">
+<meta name="description" content="端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js+Express+MySQL 操作数据库小记">
-<meta property="og:url" content="http://code.it919.cn/2017/05/node_mysql/index.html">
+<meta property="og:title" content="Linux 下安装配置node开发环境及搭建express项目小记">
+<meta property="og:url" content="http://code.it919.cn/2017/05/Linux-to-node/index.html">
 <meta property="og:site_name" content="IT开发者">
-<meta property="og:description" content="随著前端届技术大百花齐放, node已俨然成为前端开发中最具牛X的,里程碑式的技术之一,了掌握 node.js,已是每个前端程序员必备的技能了,近期接触 node.js操作 MySQL 数据库,进一步的加深对 node.js 的认识,随笔记录之">
-<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/a4b9cf89-08e9-4cc7-a8f0-850959fc5ca8.png">
-<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/2ea0b5ff-fba4-40c0-9557-6f8bc6c784ff.png">
-<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/1c79ba48-7245-4f81-9a2d-8d1352974647.png">
-<meta property="og:updated_time" content="2017-05-22T01:16:02.469Z">
+<meta property="og:description" content="端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境">
+<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/3abd3ebc-53b1-4c38-bc54-1eb978e60761.png">
+<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/a10091ed-6885-406a-861c-4b75e04108fc.png">
+<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/8751b9a1-9953-46b3-9d09-fb723f220e36.png">
+<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/e8c1a928-a689-4a5c-b479-e2ca57f43721.png">
+<meta property="og:updated_time" content="2017-05-28T06:22:10.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js+Express+MySQL 操作数据库小记">
-<meta name="twitter:description" content="随著前端届技术大百花齐放, node已俨然成为前端开发中最具牛X的,里程碑式的技术之一,了掌握 node.js,已是每个前端程序员必备的技能了,近期接触 node.js操作 MySQL 数据库,进一步的加深对 node.js 的认识,随笔记录之">
-<meta name="twitter:image" content="https://dn-coding-net-production-pp.qbox.me/a4b9cf89-08e9-4cc7-a8f0-850959fc5ca8.png">
+<meta name="twitter:title" content="Linux 下安装配置node开发环境及搭建express项目小记">
+<meta name="twitter:description" content="端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境">
+<meta name="twitter:image" content="https://dn-coding-net-production-pp.qbox.me/3abd3ebc-53b1-4c38-bc54-1eb978e60761.png">
 
 
 
@@ -142,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://code.it919.cn/2017/05/node_mysql/"/>
+  <link rel="canonical" href="http://code.it919.cn/2017/05/Linux-to-node/"/>
 
 
 
 
 
-  <title> Node.js+Express+MySQL 操作数据库小记 | IT开发者 </title>
+  <title> Linux 下安装配置node开发环境及搭建express项目小记 | IT开发者 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -270,7 +271,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://code.it919.cn/2017/05/node_mysql/">
+  <link itemprop="mainEntityOfPage" href="http://code.it919.cn/2017/05/Linux-to-node/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ecitlm">
@@ -294,7 +295,7 @@
             
             
               
-                Node.js+Express+MySQL 操作数据库小记
+                Linux 下安装配置node开发环境及搭建express项目小记
               
             
           </h1>
@@ -307,8 +308,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-05-21T13:04:28+08:00">
-                2017-05-21
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-05-28T14:06:28+08:00">
+                2017-05-28
               </time>
             
 
@@ -350,7 +351,7 @@
 
           
               <div class="post-description">
-                  随著前端届技术大百花齐放, node已俨然成为前端开发中最具牛X的,里程碑式的技术之一,了掌握 node.js,已是每个前端程序员必备的技能了,近期接触 node.js操作 MySQL 数据库,进一步的加深对 node.js 的认识,随笔记录之
+                  端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境
               </div>
           
 
@@ -365,21 +366,25 @@
       
 
       
-        <h2 id="一、node-MySQL-的安装"><a href="#一、node-MySQL-的安装" class="headerlink" title="一、node MySQL 的安装"></a>一、node MySQL 的安装</h2><p>1.进入项目命令行安装,我这里使用的是 cnpm 安装。<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm <span class="keyword">install</span> mysql</div></pre></td></tr></table></figure></p>
-<p> <img src="https://dn-coding-net-production-pp.qbox.me/a4b9cf89-08e9-4cc7-a8f0-850959fc5ca8.png" alt="node mysql"> </p>
-<p>2.在安装成功 MySQL 之后就是编写相关MySQL配置了,我写了一个mysql.js文件,node.js的mysql驱动</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//mysql.js</span></div><div class="line"><span class="keyword">var</span> mysql = <span class="built_in">require</span>(<span class="string">'mysql'</span>); <span class="comment">//调用MySQL模块</span></div><div class="line"><span class="comment">//创建一个connection</span></div><div class="line"><span class="keyword">var</span> connection = mysql.createConnection(&#123;</div><div class="line">    <span class="attr">host</span>: <span class="string">'127.0.0.1'</span>, <span class="comment">//主机</span></div><div class="line">    user: <span class="string">'root'</span>,     <span class="comment">//数据库用户名</span></div><div class="line">    password: <span class="string">'123456'</span>,     <span class="comment">//数据库密码</span></div><div class="line">    port: <span class="string">'3306'</span>,       </div><div class="line">    <span class="attr">database</span>: <span class="string">'tpcms'</span>, <span class="comment">//数据库名称</span></div><div class="line">    charset: <span class="string">'UTF8_GENERAL_CI'</span> <span class="comment">//数据库编码</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = connection</div></pre></td></tr></table></figure>
-<p>这样一个简单的数据库连接驱动就写好了,当然需要填写正确相关配置 数据库用户名、密码、数据库名称,这里要注意的是 charset 编码的问题,一开始我没有添加,返现返回回来的数据是乱码的,将 配置 exports,再其他文件就可以导入使用了</p>
-<p>3.我现在再新建一个select.js select 操作查询数据库的文件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//select.js</span></div><div class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line"><span class="keyword">const</span> app = express()</div><div class="line"><span class="keyword">var</span> router = express.Router();</div><div class="line"><span class="keyword">const</span> connection = <span class="built_in">require</span>(<span class="string">'./sql'</span>);<span class="comment">//导入mysq配置文件</span></div><div class="line"></div><div class="line"><span class="comment">//创建一个connection连接</span></div><div class="line">connection.connect(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'[query] - :'</span> + err);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'[connection connect]  succeed!'</span>); <span class="comment">//如果连接成功 控制台输出 success 了</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = res;</div><div class="line">    <span class="keyword">var</span> req = req;</div><div class="line"></div><div class="line">    <span class="comment">//执行SQL语句,这里是一条简单的MySQL查询语句</span></div><div class="line">    <span class="keyword">var</span> sql = <span class="string">"select description, title,content,time from tp_post"</span>;</div><div class="line">    connection.query(sql, <span class="function"><span class="keyword">function</span>(<span class="params">err, rows, fields</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (err) &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'[query] - :'</span> + err);</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">console</span>.log(rows)</div><div class="line">        res.send(rows)  <span class="comment">//这里在页面上输出数据</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'The solution is: '</span>, rows[<span class="number">0</span>].solution);</div><div class="line">    &#125;);</div><div class="line">&#125;)</div><div class="line"> </div><div class="line"></div><div class="line"> <span class="built_in">module</span>.exports = app</div></pre></td></tr></table></figure>
-<p>好的,select.js 文件编写好了，expor t导出，在 app.js 入口文件使用</p>
-<p>4.编写配置好app.js入口文件了<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> express = <span class="keyword">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">const</span> http = <span class="keyword">require</span>(<span class="string">'http'</span>);</div><div class="line"><span class="keyword">const</span> app = express()</div><div class="line"><span class="keyword">var</span> router = express.Router();</div><div class="line"></div><div class="line"><span class="comment">//配置路由 这样访问localhost:3000/select就能访问的接口了</span></div><div class="line">app.<span class="keyword">use</span>(<span class="string">'/select'</span>, <span class="keyword">require</span>(<span class="string">'./api/select'</span>))</div><div class="line">app.<span class="keyword">use</span>(router);</div><div class="line">app.listen(<span class="number">3000</span>);</div><div class="line">console.log(<span class="number">3000</span>);</div></pre></td></tr></table></figure></p>
-<p>ok,现在在命令行启动项目了,进入项目目录,执行 node app,项目监听的3000端口<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">node</span> <span class="title">app</span></div></pre></td></tr></table></figure></p>
-<p>我这里是出现 启动成功,也就是输出了select.js文件里面的这一句<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.<span class="built-in">log</span>(<span class="string">'[connection connect]  succeed!'</span>); <span class="comment">//如果连接成功 控制台输出success了</span></div></pre></td></tr></table></figure></p>
-<p><img src="https://dn-coding-net-production-pp.qbox.me/2ea0b5ff-fba4-40c0-9557-6f8bc6c784ff.png" alt="图片"><br>运行成功了，我在浏览器上输入 访问地址 localhost:3000/mysql,在页面上返回的就是以下json 数据了</p>
-<p><img src="https://dn-coding-net-production-pp.qbox.me/1c79ba48-7245-4f81-9a2d-8d1352974647.png" alt="json"> </p>
-<p>到这里为止，一个简单的node.js+Express 操作MySQL就完成了，一个小demo作为自己的总结记录。</p>
-<p>文献参看<br><a href="http://www.oschina.net/translate/node-mysql-tutorial?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">http://www.oschina.net/translate/node-mysql-tutorial?utm_source=tuicool&amp;utm_medium=referral</a></p>
+        <h3 id="1-Node-js-包下载"><a href="#1-Node-js-包下载" class="headerlink" title="1. Node.js 包下载"></a>1. Node.js 包下载</h3><p>先到Node.js 中文网看一下 下载包、选择对应的下载包下载 ,<br> <img src="https://dn-coding-net-production-pp.qbox.me/3abd3ebc-53b1-4c38-bc54-1eb978e60761.png" alt="图片"> </p>
+<p>Linux服务器上面 是CentOS 7.2的版本 ，我这里查看一下系统信息如下：<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root~]<span class="comment"># cat /etc/redhat-release</span></div><div class="line">CentOS Linux release <span class="number">7.2</span>.<span class="number">1511</span> (Core) </div><div class="line">[root~]<span class="comment"># uname -r</span></div><div class="line"><span class="number">3.10</span>.<span class="number">0</span>-<span class="number">514.6</span>.<span class="number">2</span>.el7.x86_64</div><div class="line">[root~]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<p> <img src="https://dn-coding-net-production-pp.qbox.me/a10091ed-6885-406a-861c-4b75e04108fc.png" alt="图片"> </p>
+<p>我下载的是<br><a href="https://npm.taobao.org/mirrors/node/v6.10.3/node-v6.10.3-linux-x64.tar.xz" target="_blank" rel="external">https://npm.taobao.org/mirrors/node/v6.10.3/node-v6.10.3-linux-x64.tar.xz</a><br>我是将包下载安装在<br>/usr/local/src</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd /usr/local/src/</span></div><div class="line"><span class="comment"># wget https://npm.taobao.org/mirrors/node/v6.10.3/node-v6.10.3-linux-x64.tar.xz</span></div><div class="line"><span class="comment"># unzip  node-v6.10.3-linux-x64.tar.xz</span></div></pre></td></tr></table></figure>
+<p>开始下载安装包 下载可能需要一段时间，下载完之后，就是解压了<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># unzip  node-v6.10.3-linux-x64.tar.xz</span></div></pre></td></tr></table></figure></p>
+<h3 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2. 修改配置文件"></a>2. 修改配置文件</h3><blockquote>
+<p>下载解压完成之后就是修改配置文件了，修改 Node 的环境变量</p>
+</blockquote>
+<p>编辑文件  vi /etc/profile、进入etc目录找到 ，编辑profile，在文件在文件最下面修改添加如下代码<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># node</span></div><div class="line">export NODE_HOME=<span class="regexp">/usr/local</span><span class="regexp">/src/node</span>-v6.<span class="number">10.3</span>-linux-x64</div><div class="line">export PATH=$<span class="symbol">PATH:</span>$NODE_HOME/bin  </div><div class="line">export NODE_PATH=$NODE_HOME/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span></span></div></pre></td></tr></table></figure></p>
+<p>修改后保存，在命令行输入：source /etc/profile，让配置文件生效,现在可以再命令行测试一下node 是否安装成功了<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@ /]<span class="comment"># node -v</span></div><div class="line">v6.<span class="number">10.3</span></div><div class="line">[root@ /]<span class="comment"># npm -v</span></div><div class="line"><span class="number">3.10</span>.<span class="number">10</span></div></pre></td></tr></table></figure></p>
+<p>提示node 6.10.3版本,npm为3.10.10版本，ok，现在 Node已经是安装好了，</p>
+<h3 id="3-安装-express"><a href="#3-安装-express" class="headerlink" title="3. 安装 express"></a>3. 安装 express</h3><p>首先需要全局安装express，<br>npm install -g express-generator #需先安装express-generator<br>npm install -g express<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@ /]<span class="comment"># npm install -g express-generator </span></div><div class="line">/usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/bin/express -&gt; /usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/lib/node_modules/express-generator/bin/express-cli.js</div><div class="line">/usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/lib</div><div class="line">└── express-generator@<span class="number">4.15</span>.<span class="number">0</span> </div><div class="line"></div><div class="line">[root@ /]<span class="comment"># npm install -g express</span></div><div class="line">/usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/lib</div><div class="line">└── express@<span class="number">4.15</span>.<span class="number">3</span> </div><div class="line"></div><div class="line">[root@iZ28zgf2eiiZ /]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<p> <img src="https://dn-coding-net-production-pp.qbox.me/8751b9a1-9953-46b3-9d09-fb723f220e36.png" alt="图片"><br>执行安装好了,可以查看一下express 的版本了,4.15.0<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@ /]<span class="comment"># express --version</span></div><div class="line"><span class="number">4.15</span>.<span class="number">0</span></div><div class="line">[root@ /]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<h3 id="4-创建-express-项目"><a href="#4-创建-express-项目" class="headerlink" title="4. 创建 express 项目"></a>4. 创建 express 项目</h3><blockquote>
+<p>现在可以使用express命令行创建项目了,<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@i node_web]<span class="comment"># express first_express</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>我是进入到了我指定的node_web项目文件下main 执行命令行之后如下目录结构<br> <img src="https://dn-coding-net-production-pp.qbox.me/e8c1a928-a689-4a5c-b479-e2ca57f43721.png" alt="图片"><br>按照提示说的进行安装相关依赖等<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">install</span> dependencies:</div><div class="line">     $ cd first_express &amp;&amp; npm <span class="keyword">install</span></div><div class="line">   run the app:</div><div class="line">     $ DEBUG=<span class="keyword">first</span>-express:* npm <span class="keyword">start</span></div></pre></td></tr></table></figure></p>
+<p>然后就可以访问你的express项目了，默认端口是3000</p>
 
       
     </div>
@@ -435,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/js_code_style/" rel="next" title="JavaScript编码规范">
-                <i class="fa fa-chevron-left"></i> JavaScript编码规范
+              <a href="/2017/05/node_mysql/" rel="next" title="Node.js+Express+MySQL 操作数据库小记">
+                <i class="fa fa-chevron-left"></i> Node.js+Express+MySQL 操作数据库小记
               </a>
             
           </div>
@@ -444,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/Linux-to-node/" rel="prev" title="Linux 下安装配置node开发环境及搭建express项目小记">
-                Linux 下安装配置node开发环境及搭建express项目小记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -587,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、node-MySQL-的安装"><span class="nav-number">1.</span> <span class="nav-text">一、node MySQL 的安装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Node-js-包下载"><span class="nav-number">1.</span> <span class="nav-text">1. Node.js 包下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改配置文件"><span class="nav-number">2.</span> <span class="nav-text">2. 修改配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-安装-express"><span class="nav-number">3.</span> <span class="nav-text">3. 安装 express</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-创建-express-项目"><span class="nav-number">4.</span> <span class="nav-text">4. 创建 express 项目</span></a></li></ol></div>
             
 
           </div>
