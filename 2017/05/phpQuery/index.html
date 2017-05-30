@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux 安装配置node开发环境及搭建express项目小记" />
+  <meta name="keywords" content="ThinkPHP5 集成扩展 phpQuery 用法总结" />
 
 
 
@@ -101,21 +101,18 @@
 
 
 
-<meta name="description" content="端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境">
+<meta name="description" content="假期闲来无事,宅在家中,突然想到php里面如何去使用操作DOM爬去自己想要的数据返回给前端了,经过一番搜索找到了这个phpQuery扩展,于是打算集成到ThinkPHP5项目中去使用,遂记录之,集成扩展 phpQuery用法总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 下安装配置node开发环境及搭建express项目小记">
-<meta property="og:url" content="http://code.it919.cn/2017/05/Linux-to-node/index.html">
+<meta property="og:title" content="ThinkPHP5 集成扩展 phpQuery用法总结">
+<meta property="og:url" content="http://code.it919.cn/2017/05/phpQuery/index.html">
 <meta property="og:site_name" content="IT开发者">
-<meta property="og:description" content="端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境">
-<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/3abd3ebc-53b1-4c38-bc54-1eb978e60761.png">
-<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/a10091ed-6885-406a-861c-4b75e04108fc.png">
-<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/8751b9a1-9953-46b3-9d09-fb723f220e36.png">
-<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/e8c1a928-a689-4a5c-b479-e2ca57f43721.png">
-<meta property="og:updated_time" content="2017-05-28T06:22:10.167Z">
+<meta property="og:description" content="假期闲来无事,宅在家中,突然想到php里面如何去使用操作DOM爬去自己想要的数据返回给前端了,经过一番搜索找到了这个phpQuery扩展,于是打算集成到ThinkPHP5项目中去使用,遂记录之,集成扩展 phpQuery用法总结">
+<meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/695499db-0daf-46cf-a8c1-ba2e0216b8e5.png">
+<meta property="og:updated_time" content="2017-05-30T08:40:31.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 下安装配置node开发环境及搭建express项目小记">
-<meta name="twitter:description" content="端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境">
-<meta name="twitter:image" content="https://dn-coding-net-production-pp.qbox.me/3abd3ebc-53b1-4c38-bc54-1eb978e60761.png">
+<meta name="twitter:title" content="ThinkPHP5 集成扩展 phpQuery用法总结">
+<meta name="twitter:description" content="假期闲来无事,宅在家中,突然想到php里面如何去使用操作DOM爬去自己想要的数据返回给前端了,经过一番搜索找到了这个phpQuery扩展,于是打算集成到ThinkPHP5项目中去使用,遂记录之,集成扩展 phpQuery用法总结">
+<meta name="twitter:image" content="https://dn-coding-net-production-pp.qbox.me/695499db-0daf-46cf-a8c1-ba2e0216b8e5.png">
 
 
 
@@ -143,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://code.it919.cn/2017/05/Linux-to-node/"/>
+  <link rel="canonical" href="http://code.it919.cn/2017/05/phpQuery/"/>
 
 
 
 
 
-  <title> Linux 下安装配置node开发环境及搭建express项目小记 | IT开发者 </title>
+  <title> ThinkPHP5 集成扩展 phpQuery用法总结 | IT开发者 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -271,7 +268,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://code.it919.cn/2017/05/Linux-to-node/">
+  <link itemprop="mainEntityOfPage" href="http://code.it919.cn/2017/05/phpQuery/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ecitlm">
@@ -295,7 +292,7 @@
             
             
               
-                Linux 下安装配置node开发环境及搭建express项目小记
+                ThinkPHP5 集成扩展 phpQuery用法总结
               
             
           </h1>
@@ -308,8 +305,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-05-28T14:06:28+08:00">
-                2017-05-28
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-05-30T14:34:28+08:00">
+                2017-05-30
               </time>
             
 
@@ -327,8 +324,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Node/" itemprop="url" rel="index">
-                    <span itemprop="name">Node</span>
+                  <a href="/categories/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
                   </a>
                 </span>
 
@@ -351,7 +348,7 @@
 
           
               <div class="post-description">
-                  端午假期,作为一个程序猿,还是继续写代码咯,折腾一下 在Linux下面安装 Node.js,Node.js已经成为非常广泛的Javascript运行环境,由于开发需要,我也在服务器上面部署了Node.js 开发环境
+                  假期闲来无事,宅在家中,突然想到php里面如何去使用操作DOM爬去自己想要的数据返回给前端了,经过一番搜索找到了这个phpQuery扩展,于是打算集成到ThinkPHP5项目中去使用,遂记录之,集成扩展 phpQuery用法总结
               </div>
           
 
@@ -366,25 +363,23 @@
       
 
       
-        <h3 id="1-Node-js-包下载"><a href="#1-Node-js-包下载" class="headerlink" title="1. Node.js 包下载"></a>1. Node.js 包下载</h3><p>先到Node.js 中文网看一下 下载包、选择对应的下载包下载 ,<br> <img src="https://dn-coding-net-production-pp.qbox.me/3abd3ebc-53b1-4c38-bc54-1eb978e60761.png" alt="图片"> </p>
-<p>Linux服务器上面 是CentOS 7.2的版本 ，我这里查看一下系统信息如下：<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root~]<span class="comment"># cat /etc/redhat-release</span></div><div class="line">CentOS Linux release <span class="number">7.2</span>.<span class="number">1511</span> (Core) </div><div class="line">[root~]<span class="comment"># uname -r</span></div><div class="line"><span class="number">3.10</span>.<span class="number">0</span>-<span class="number">514.6</span>.<span class="number">2</span>.el7.x86_64</div><div class="line">[root~]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
-<p> <img src="https://dn-coding-net-production-pp.qbox.me/a10091ed-6885-406a-861c-4b75e04108fc.png" alt="图片"> </p>
-<p>我下载的是<br><a href="https://npm.taobao.org/mirrors/node/v6.10.3/node-v6.10.3-linux-x64.tar.xz" target="_blank" rel="external">https://npm.taobao.org/mirrors/node/v6.10.3/node-v6.10.3-linux-x64.tar.xz</a><br>我是将包下载安装在<br>/usr/local/src</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd /usr/local/src/</span></div><div class="line"><span class="comment"># wget https://npm.taobao.org/mirrors/node/v6.10.3/node-v6.10.3-linux-x64.tar.xz</span></div><div class="line"><span class="comment"># unzip  node-v6.10.3-linux-x64.tar.xz</span></div></pre></td></tr></table></figure>
-<p>开始下载安装包 下载可能需要一段时间，下载完之后，就是解压了<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># unzip  node-v6.10.3-linux-x64.tar.xz</span></div></pre></td></tr></table></figure></p>
-<h3 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2. 修改配置文件"></a>2. 修改配置文件</h3><blockquote>
-<p>下载解压完成之后就是修改配置文件了，修改 Node 的环境变量</p>
+        <h2 id="什么是phpQuery？"><a href="#什么是phpQuery？" class="headerlink" title="什么是phpQuery？"></a>什么是phpQuery？</h2><blockquote>
+<p><a href="http://code.google.com/p/phpquery/" target="_blank" rel="external">phpQuery</a>是一个类似于Jquery，能够在 PHP里面操作 HTML DOM节点的一个扩展库，能够灵活的对页面数据进行采集、爬虫获得自己想要的数据、文件下载地址：<a href="http://code.google.com/p/phpquery/" target="_blank" rel="external">http://code.google.com/p/phpquery/</a></p>
 </blockquote>
-<p>编辑文件  vi /etc/profile、进入etc目录找到 ，编辑profile，在文件在文件最下面修改添加如下代码<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># node</span></div><div class="line">export NODE_HOME=<span class="regexp">/usr/local</span><span class="regexp">/src/node</span>-v6.<span class="number">10.3</span>-linux-x64</div><div class="line">export PATH=$<span class="symbol">PATH:</span>$NODE_HOME/bin  </div><div class="line">export NODE_PATH=$NODE_HOME/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span></span></div></pre></td></tr></table></figure></p>
-<p>修改后保存，在命令行输入：source /etc/profile，让配置文件生效,现在可以再命令行测试一下node 是否安装成功了<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@ /]<span class="comment"># node -v</span></div><div class="line">v6.<span class="number">10.3</span></div><div class="line">[root@ /]<span class="comment"># npm -v</span></div><div class="line"><span class="number">3.10</span>.<span class="number">10</span></div></pre></td></tr></table></figure></p>
-<p>提示node 6.10.3版本,npm为3.10.10版本，ok，现在 Node已经是安装好了，</p>
-<h3 id="3-安装-express"><a href="#3-安装-express" class="headerlink" title="3. 安装 express"></a>3. 安装 express</h3><p>首先需要全局安装express，<br>npm install -g express-generator #需先安装express-generator<br>npm install -g express<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@ /]<span class="comment"># npm install -g express-generator </span></div><div class="line">/usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/bin/express -&gt; /usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/lib/node_modules/express-generator/bin/express-cli.js</div><div class="line">/usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/lib</div><div class="line">└── express-generator@<span class="number">4.15</span>.<span class="number">0</span> </div><div class="line"></div><div class="line">[root@ /]<span class="comment"># npm install -g express</span></div><div class="line">/usr/local/src/node-v6.<span class="number">10.3</span>-linux-x64/lib</div><div class="line">└── express@<span class="number">4.15</span>.<span class="number">3</span> </div><div class="line"></div><div class="line">[root@iZ28zgf2eiiZ /]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
-<p> <img src="https://dn-coding-net-production-pp.qbox.me/8751b9a1-9953-46b3-9d09-fb723f220e36.png" alt="图片"><br>执行安装好了,可以查看一下express 的版本了,4.15.0<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@ /]<span class="comment"># express --version</span></div><div class="line"><span class="number">4.15</span>.<span class="number">0</span></div><div class="line">[root@ /]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
-<h3 id="4-创建-express-项目"><a href="#4-创建-express-项目" class="headerlink" title="4. 创建 express 项目"></a>4. 创建 express 项目</h3><blockquote>
-<p>现在可以使用express命令行创建项目了,<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@i node_web]<span class="comment"># express first_express</span></div></pre></td></tr></table></figure></p>
+<h3 id="phpQuery的使用介绍"><a href="#phpQuery的使用介绍" class="headerlink" title="phpQuery的使用介绍"></a>phpQuery的使用介绍</h3><blockquote>
+<p>如下代码 使用 <code>\phpQuery::newDocumentHTML($data)</code> 得到 HTML 的 DOM 树，就可以像Jquery一样操作HTML节点了<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">$filePath = <span class="string">'http://www.xxxx.com/'</span>;</div><div class="line">$data=Http_Spider($filePath);</div><div class="line">\phpQuery::newDocumentHTML($data);</div><div class="line"><span class="comment">//\phpQuery::newDocumentFile($data);</span></div><div class="line">$arr = <span class="keyword">array</span>();</div><div class="line"></div><div class="line">$list = pq(<span class="string">'#picture'</span>)-&gt;find(<span class="string">"a"</span>);</div><div class="line"><span class="keyword">foreach</span> ($list <span class="keyword">as</span> $li) &#123;</div><div class="line"> $title = pq($li)-&gt;attr(<span class="string">'title'</span>);</div><div class="line"> $url = pq($li)-&gt;attr(<span class="string">'href'</span>);</div><div class="line"> $img = pq($li)-&gt;find(<span class="string">'img'</span>)-&gt;attr(<span class="string">'src'</span>);</div><div class="line"> $tmp = <span class="keyword">array</span>([</div><div class="line">	 <span class="string">'title'</span> =&gt; $title,</div><div class="line">	 <span class="string">'url'</span> =&gt; $url,</div><div class="line">	 <span class="string">'img'</span> =&gt; $img</div><div class="line">	 ]);</div><div class="line">     array_push($arr, $tmp);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>我是进入到了我指定的node_web项目文件下main 执行命令行之后如下目录结构<br> <img src="https://dn-coding-net-production-pp.qbox.me/e8c1a928-a689-4a5c-b479-e2ca57f43721.png" alt="图片"><br>按照提示说的进行安装相关依赖等<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">install</span> dependencies:</div><div class="line">     $ cd first_express &amp;&amp; npm <span class="keyword">install</span></div><div class="line">   run the app:</div><div class="line">     $ DEBUG=<span class="keyword">first</span>-express:* npm <span class="keyword">start</span></div></pre></td></tr></table></figure></p>
-<p>然后就可以访问你的express项目了，默认端口是3000</p>
+<h3 id="载入文档（loading-documents）"><a href="#载入文档（loading-documents）" class="headerlink" title="载入文档（loading documents）"></a>载入文档（loading documents）</h3><blockquote>
+<p>加载文档主要通过phpQuery::newDocument来进行操作，其作用是使得phpQuery可以在服务器预先读取到指定的文件或文本内容。<br>主要的方法包括：</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">phpQuery::newDocument(html,html,contentType = <span class="keyword">null</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentFile(file,file,contentType = <span class="keyword">null</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentHTML(html,html,charset = <span class="string">'utf-8'</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentXHTML(html,html,charset = <span class="string">'utf-8'</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentXML(html,html,charset = <span class="string">'utf-8'</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentPHP(html,html,contentType = <span class="keyword">null</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentFileHTML(file,file,charset = <span class="string">'utf-8'</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentFileXHTML(file,file,charset = <span class="string">'utf-8'</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentFileXML(file,file,charset = <span class="string">'utf-8'</span>)</div><div class="line"></div><div class="line">phpQuery::newDocumentFilePHP(file,file,contentType)</div></pre></td></tr></table></figure>
+<h2 id="将phpQuery扩展集成到-ThinkPHP5"><a href="#将phpQuery扩展集成到-ThinkPHP5" class="headerlink" title="将phpQuery扩展集成到 ThinkPHP5"></a>将phpQuery扩展集成到 ThinkPHP5</h2><blockquote>
+<p>我们下载phpQuery包 然后将包复制到 Thinkphp项目的根目录 vendor（第三方类库目录）文件夹里面，如下<br> <img src="https://dn-coding-net-production-pp.qbox.me/695499db-0daf-46cf-a8c1-ba2e0216b8e5.png" alt="图片"> </p>
+</blockquote>
+<p>然后还有一个文件 <code>QueryList</code>，QueryList作为一个类方法使用，在这个类方法里面引入扩展，<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vendor(<span class="string">'phpQuery.phpQuery'</span>);</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryList</span></span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>接下来就是如何在控制器方法里面使用这个扩展</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">include</span>(<span class="string">'QueryList.php'</span>);</div><div class="line"></div><div class="line"> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">splider</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">     $filePath = <span class="string">'http://www.xxx.com/'</span>;</div><div class="line">      $data=Http_Spider($filePath);</div><div class="line">      \phpQuery::newDocumentHTML($data);</div><div class="line"></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>接下来就可以像JQuery，一样舒服的使用了</p>
 
       
     </div>
@@ -429,9 +424,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+            <a href="/tags/php/" rel="tag"><i class="fa fa-tag"></i> php</a>
           
-            <a href="/tags/node/" rel="tag"><i class="fa fa-tag"></i> node</a>
+            <a href="/tags/ThinkPHP/" rel="tag"><i class="fa fa-tag"></i> ThinkPHP</a>
           
         </div>
       
@@ -440,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/node_mysql/" rel="next" title="Node.js+Express+MySQL 操作数据库小记">
-                <i class="fa fa-chevron-left"></i> Node.js+Express+MySQL 操作数据库小记
+              <a href="/2017/05/Linux-to-node/" rel="next" title="Linux 下安装配置node开发环境及搭建express项目小记">
+                <i class="fa fa-chevron-left"></i> Linux 下安装配置node开发环境及搭建express项目小记
               </a>
             
           </div>
@@ -449,10 +444,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/phpQuery/" rel="prev" title="ThinkPHP5 集成扩展 phpQuery用法总结">
-                ThinkPHP5 集成扩展 phpQuery用法总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -592,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Node-js-包下载"><span class="nav-number">1.</span> <span class="nav-text">1. Node.js 包下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改配置文件"><span class="nav-number">2.</span> <span class="nav-text">2. 修改配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-安装-express"><span class="nav-number">3.</span> <span class="nav-text">3. 安装 express</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-创建-express-项目"><span class="nav-number">4.</span> <span class="nav-text">4. 创建 express 项目</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是phpQuery？"><span class="nav-number">1.</span> <span class="nav-text">什么是phpQuery？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#phpQuery的使用介绍"><span class="nav-number">1.1.</span> <span class="nav-text">phpQuery的使用介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#载入文档（loading-documents）"><span class="nav-number">1.2.</span> <span class="nav-text">载入文档（loading documents）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将phpQuery扩展集成到-ThinkPHP5"><span class="nav-number">2.</span> <span class="nav-text">将phpQuery扩展集成到 ThinkPHP5</span></a></li></ol></div>
             
 
           </div>
