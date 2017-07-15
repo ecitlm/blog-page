@@ -309,7 +309,8 @@ hr {
 blockquote {
   padding: 0 15px;
   color: #666;
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #00aa98;
+  background: #fefefe;
 }
 blockquote cite::before {
   content: "-";
@@ -508,7 +509,8 @@ code {
 code {
   padding: 2px 4px;
   word-wrap: break-word;
-  color: #4d4d4c;
+/*color: $highlight-foreground;*/
+  color: #c7254e;
   background: #f7f7f7;
   border-radius: 3px;
   font-size: 13px;
@@ -1732,7 +1734,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f93405;
+  background: #ff01ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2782,4 +2784,11 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
