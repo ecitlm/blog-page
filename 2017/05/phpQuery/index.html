@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="IT开发者">
 <meta property="og:description" content="假期闲来无事,宅在家中,突然想到php里面如何去使用操作DOM爬去自己想要的数据返回给前端了,经过一番搜索找到了这个phpQuery扩展,于是打算集成到ThinkPHP5项目中去使用,遂记录之,集成扩展 phpQuery用法总结">
 <meta property="og:image" content="https://dn-coding-net-production-pp.qbox.me/695499db-0daf-46cf-a8c1-ba2e0216b8e5.png">
-<meta property="og:updated_time" content="2017-06-02T02:24:18.430Z">
+<meta property="og:updated_time" content="2017-10-20T16:01:50.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThinkPHP5 集成扩展 phpQuery用法总结">
 <meta name="twitter:description" content="假期闲来无事,宅在家中,突然想到php里面如何去使用操作DOM爬去自己想要的数据返回给前端了,经过一番搜索找到了这个phpQuery扩展,于是打算集成到ThinkPHP5项目中去使用,遂记录之,集成扩展 phpQuery用法总结">
@@ -381,7 +381,7 @@
 </blockquote>
 <p>然后还有一个文件 <code>QueryList</code>，QueryList作为一个类方法使用，在这个类方法里面引入扩展，<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vendor(<span class="string">'phpQuery.phpQuery'</span>);</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryList</span></span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>接下来就是如何在控制器方法里面使用这个扩展</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">include</span>(<span class="string">'QueryList.php'</span>);</div><div class="line"></div><div class="line"> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">splider</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">     $filePath = <span class="string">'http://www.xxx.com/'</span>;</div><div class="line">      $data=Http_Spider($filePath);</div><div class="line">      \phpQuery::newDocumentHTML($data);</div><div class="line"></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">include</span>(<span class="string">'QueryList.php'</span>);</div><div class="line"></div><div class="line"> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">splider</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">     $filePath = <span class="string">'http://www.xxx.com/'</span>;</div><div class="line">      $data=Http_Spider($filePath);</div><div class="line">      \phpQuery::newDocumentHTML($data);</div><div class="line"></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>接下来就可以像JQuery，一样舒服的使用了</p>
 
       
@@ -518,7 +518,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -526,7 +526,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -535,7 +535,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -611,7 +611,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -633,12 +633,11 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共40.0k字</span>
+  <span class="post-count">博客全站共41.6k字       &#169;    CopyRight 赣ICP备16002536号-1</span>
 </div>
 
 <!-- 动画线条 -->
-<!-- <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
- -->
+ <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" color="0,0,100" opacity='0.7' zIndex="-2" count="40"></script>
 <!-- 百度统计 -->
 <script>
 var _hmt = _hmt || [];

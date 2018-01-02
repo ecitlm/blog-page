@@ -108,12 +108,10 @@
 <meta property="og:url" content="http://code.it919.cn/2016/12/wx-page/index.html">
 <meta property="og:site_name" content="IT开发者">
 <meta property="og:description" content="微信小程序的一些相关笔记。">
-<meta property="og:image" content="https://static.oschina.net/uploads/img/201609/29231201_GcPQ.png">
-<meta property="og:updated_time" content="2016-12-12T01:06:25.904Z">
+<meta property="og:updated_time" content="2017-11-03T14:52:21.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序相关">
 <meta name="twitter:description" content="微信小程序的一些相关笔记。">
-<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201609/29231201_GcPQ.png">
 
 
 
@@ -373,9 +371,8 @@
 <p>2.这里是列表文本事件可以将用户的行为反馈到逻辑层进行处理。</p>
 <p>3.这里是列表文本事件可以绑定在组件上，当达到触发事件，就会执行逻辑层中对应的事件处理函数。<br>这里是列表文本 事件对象可以携带额外信息，如id, dataset, touches。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">id</span>=<span class="string">"tapTest"</span> <span class="attr">data-hi</span>=<span class="string">"MINA"</span> <span class="attr">bindtap</span>=<span class="string">"tapName"</span>&gt;</span> Click me! <span class="tag">&lt;/<span class="name">view</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Page(&#123;</div><div class="line">  <span class="attr">tapName</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(event.target) </div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//事件处理函数</span></div><div class="line">bindViewTap: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> id=e.target.id;</div><div class="line">  <span class="built_in">console</span>.log(e.target.id);</div><div class="line">    </div><div class="line"> <span class="comment">// this.data.id=id,</span></div><div class="line">  <span class="built_in">console</span>.log(id);</div><div class="line"></div><div class="line">  wx.navigateTo(&#123;</div><div class="line">    <span class="attr">url</span>: <span class="string">'../logs/logs?title='</span>+id</div><div class="line">  &#125;)</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
-<p> <img src="https://static.oschina.net/uploads/img/201609/29231201_GcPQ.png" alt="图片"> </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Page(&#123;</div><div class="line">  tapName: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(event.target) </div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//事件处理函数</span></div><div class="line">bindViewTap: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> id=e.target.id;</div><div class="line">  <span class="built_in">console</span>.log(e.target.id);</div><div class="line">    </div><div class="line"> <span class="comment">// this.data.id=id,</span></div><div class="line">  <span class="built_in">console</span>.log(id);</div><div class="line"></div><div class="line">  wx.navigateTo(&#123;</div><div class="line">    url: <span class="string">'../logs/logs?title='</span>+id</div><div class="line">  &#125;)</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
 <p>可以看到 dataset 里面就是我们设置的data-hi=”MINA”的值了。</p>
 <p>现在我们来看下刚刚我们写的， 首先 bindtap,以bind开头的就是要给他绑定个事件，</p>
 <p>这个事件的名字就是“=”号后面的数值就是绑定的事件名称，需要在 逻辑【js】层定义上。 </p>
@@ -386,7 +383,7 @@
 <p>跳转页面的接收代码</p>
 </blockquote>
 <p>*.js 跳到新页面之后在onload里面直接接收参数，接收方法也就是 e.[参数值]</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Page(&#123;</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">logs</span>: [],</div><div class="line">    <span class="attr">title</span>:<span class="string">""</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">onLoad</span>: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(e)</div><div class="line">    <span class="keyword">this</span>.setData(&#123;</div><div class="line">       <span class="attr">title</span>: e.title </div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Page(&#123;</div><div class="line">  data: &#123;</div><div class="line">    logs: [],</div><div class="line">    title:<span class="string">""</span></div><div class="line">  &#125;,</div><div class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(e)</div><div class="line">    <span class="keyword">this</span>.setData(&#123;</div><div class="line">       title: e.title </div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -520,7 +517,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -528,7 +525,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -537,7 +534,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -613,7 +610,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -635,12 +632,11 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共40.0k字</span>
+  <span class="post-count">博客全站共41.6k字       &#169;    CopyRight 赣ICP备16002536号-1</span>
 </div>
 
 <!-- 动画线条 -->
-<!-- <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
- -->
+ <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" color="0,0,100" opacity='0.7' zIndex="-2" count="40"></script>
 <!-- 百度统计 -->
 <script>
 var _hmt = _hmt || [];

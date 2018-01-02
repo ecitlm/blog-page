@@ -111,7 +111,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1838578-43f835019408ae5d.gif?imageMogr2/auto-orient/strip">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1838578-a2f3b7b8c148b861.gif?imageMogr2/auto-orient/strip">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1838578-b7ea09d7e92c8074.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-06-16T15:45:56.503Z">
+<meta property="og:updated_time" content="2017-10-20T16:01:50.913Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime_text3 实用插件整理">
 <meta name="twitter:description" content="实用插件整理录一些自己在使用sublime时常用的一些插件:cssrem , SublimeServer , FileHeader ,OmniMarkupPreviewer , sublime-jsdocs  , AutoFileName,SublimeText-Nodejs , Sublime-Better-Completion , SublimeAllAutocomplete,JsFormat">
@@ -358,7 +358,7 @@
 <p>需要先Package install安装</p>
 </blockquote>
 <p>按Ctrl+`调出console 复制代码运行</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">importurllib.request,os;pf=<span class="string">'Package Control.sublime-package'</span>;ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));<span class="built_in">open</span>(os.path.join(ipp,pf),<span class="string">'wb'</span>).<span class="built_in">write</span>(urllib.request.urlopen(<span class="string">'http://sublime.wbond.net/'</span>+pf.<span class="built_in">replace</span>(<span class="string">' '</span>,<span class="string">'%20'</span>)).<span class="built_in">read</span>())</div></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">importurllib.request,<span class="built_in">os</span>;pf=<span class="string">'Package Control.sublime-package'</span>;ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));<span class="built_in">open</span>(<span class="built_in">os</span>.<span class="built_in">path</span>.join(ipp,pf),<span class="string">'wb'</span>).<span class="built_in">write</span>(urllib.request.urlopen(<span class="string">'http://sublime.wbond.net/'</span>+pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).<span class="built_in">read</span>())</div></pre></td></tr></table></figure>
 <h4 id="cssrem"><a href="#cssrem" class="headerlink" title="cssrem"></a>cssrem</h4><blockquote>
 <p>一个CSS的px值转rem值的Sublime Text 3自动完成插件。<a href="https://github.com/flashlizi/cssrem" target="_blank" rel="external">下载地址</a> <a href="https://github.com/flashlizi/cssrem" target="_blank" rel="external">https://github.com/flashlizi/cssrem</a></p>
 </blockquote>
@@ -422,7 +422,7 @@
 <p>sublime text本身是不支持中文编码的，所以需要通过安装插件来解决，ConvertToUTF8插件可以实现。</p>
 </blockquote>
 <h4 id="SublimeTmpl"><a href="#SublimeTmpl" class="headerlink" title="SublimeTmpl"></a>SublimeTmpl</h4><blockquote>
-<p>能够很好的新建文件时使用模版的内容了, 目前添加了html/js/css/php/python/ruby的模版.<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ctrl+alt+h <span class="selector-tag">html</span></div><div class="line">ctrl+alt+j javascript</div><div class="line">ctrl+alt+c css</div><div class="line">ctrl+alt+<span class="selector-tag">p</span> php</div><div class="line">ctrl+alt+r ruby</div><div class="line">ctrl+alt++shift+<span class="selector-tag">p</span> python</div></pre></td></tr></table></figure></p>
+<p>能够很好的新建文件时使用模版的内容了, 目前添加了html/js/css/php/python/ruby的模版.<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ctrl+alt+h html</div><div class="line">ctrl+alt+j javascript</div><div class="line">ctrl+alt+c css</div><div class="line">ctrl+alt+<span class="selector-tag">p</span> php</div><div class="line">ctrl+alt+r ruby</div><div class="line">ctrl+alt++shift+<span class="selector-tag">p</span> python</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h4 id="BracketHighlighter"><a href="#BracketHighlighter" class="headerlink" title="BracketHighlighter"></a>BracketHighlighter</h4><blockquote>
 <p>BracketHighlighter 插件能为Sublime Text提供括号，引号这类高亮功能  <a href="https://github.com/facelessuser/BracketHighlighter" target="_blank" rel="external">GitHub地址</a></p>
@@ -590,7 +590,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -598,7 +598,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -607,7 +607,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -683,7 +683,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -705,12 +705,11 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共40.0k字</span>
+  <span class="post-count">博客全站共41.6k字       &#169;    CopyRight 赣ICP备16002536号-1</span>
 </div>
 
 <!-- 动画线条 -->
-<!-- <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
- -->
+ <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" color="0,0,100" opacity='0.7' zIndex="-2" count="40"></script>
 <!-- 百度统计 -->
 <script>
 var _hmt = _hmt || [];
