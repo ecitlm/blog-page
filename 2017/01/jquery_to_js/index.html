@@ -103,14 +103,16 @@
 
 
 <meta name="description" content="You Don&apos;t Need jQuery,前端发展很快，现代浏览器原生 API 已经足够好用。我们并不需要为了操作 DOM、Event 等再学习一下 jQuery 的 API。同时由于 React、Angular、Vue 等框架的流行，直接操作 DOM 不再是好的模式，jQuery 使用场景大大减少。本项目总结了大部分 jQuery API 替代的方法，暂时只支持 IE10+ 以上浏览器。">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="You Don't Need jQuery">
+<meta property="og:title" content="You Don&#39;t Need jQuery">
 <meta property="og:url" content="http://code.it919.cn/2017/01/jquery_to_js/index.html">
 <meta property="og:site_name" content="IT开发者">
 <meta property="og:description" content="You Don&apos;t Need jQuery,前端发展很快，现代浏览器原生 API 已经足够好用。我们并不需要为了操作 DOM、Event 等再学习一下 jQuery 的 API。同时由于 React、Angular、Vue 等框架的流行，直接操作 DOM 不再是好的模式，jQuery 使用场景大大减少。本项目总结了大部分 jQuery API 替代的方法，暂时只支持 IE10+ 以上浏览器。">
-<meta property="og:updated_time" content="2017-01-17T01:49:26.132Z">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-20T16:01:50.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="You Don't Need jQuery">
+<meta name="twitter:title" content="You Don&#39;t Need jQuery">
 <meta name="twitter:description" content="You Don&apos;t Need jQuery,前端发展很快，现代浏览器原生 API 已经足够好用。我们并不需要为了操作 DOM、Event 等再学习一下 jQuery 的 API。同时由于 React、Angular、Vue 等框架的流行，直接操作 DOM 不再是好的模式，jQuery 使用场景大大减少。本项目总结了大部分 jQuery API 替代的方法，暂时只支持 IE10+ 以上浏览器。">
 
 
@@ -508,7 +510,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$el.position();</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line">&#123; <span class="attr">left</span>: el.offsetLeft, <span class="attr">top</span>: el.offsetTop &#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>Offset</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$el.offset();</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOffset</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> box = el.getBoundingClientRect();</div><div class="line"></div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">top</span>: box.top + <span class="built_in">window</span>.pageYOffset - <span class="built_in">document</span>.documentElement.clientTop,</div><div class="line">    <span class="attr">left</span>: box.left + <span class="built_in">window</span>.pageXOffset - <span class="built_in">document</span>.documentElement.clientLeft</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$el.offset();</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOffset</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> box = el.getBoundingClientRect();</div><div class="line"></div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    top: box.top + <span class="built_in">window</span>.pageYOffset - <span class="built_in">document</span>.documentElement.clientTop,</div><div class="line">    left: box.left + <span class="built_in">window</span>.pageXOffset - <span class="built_in">document</span>.documentElement.clientLeft</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -723,7 +725,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -838,11 +840,11 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.6k字       &#169;    CopyRight 赣ICP备16002536号-1</span>
+  <span class="post-count">博客全站共44.4k字       &#169;    CopyRight 赣ICP备16002536号-1</span>
 </div>
 
 <!-- 动画线条 -->
- <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" color="0,0,100" opacity='0.7' zIndex="-2" count="40"></script>
+ <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 <!-- 百度统计 -->
 <script>
 var _hmt = _hmt || [];
